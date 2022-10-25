@@ -46,6 +46,12 @@ export function loadOpenSearchDashboardsPlatformPlugin(pluginDir: string) {
   const isExample = Path.basename(parentDir) === 'examples';
   const isRootPlugin = parentDir === Path.resolve(REPO_ROOT, 'plugins');
 
+  console.log('start now')
+  console.log(parentDir)
+  console.log(Path.resolve(REPO_ROOT, 'plugins'))
+  console.log(isRootPlugin)
+  console.log('stop now')
+
   if (isFixture || isExample || isRootPlugin) {
     return parseOpenSearchDashboardsPlatformPlugin(
       Path.resolve(pluginDir, 'opensearch_dashboards.json')
